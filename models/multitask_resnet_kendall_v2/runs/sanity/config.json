@@ -1,0 +1,21 @@
+{
+  "data_root": "mic_array_data",
+  "output_dir": "models/multitask_resnet_kendall_v2/runs/sanity",
+  "seed": 42,
+  "epochs": 3,
+  "batch_size": 8,
+  "num_workers": 0,
+  "learning_rate": 0.0003,
+  "weight_decay": 0.0001,
+  "window_seconds": 1.5,
+  "hop_seconds": 0.75,
+  "split_ratio": 0.75,
+  "n_fft": 1024,
+  "hop_length": 512,
+  "n_mels": 256,
+  "mel_height": 256,
+  "mel_width": 256,
+  "max_train_steps": 20,
+  "max_val_steps": 5,
+  "device": "cuda"
+}
