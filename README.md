@@ -2,6 +2,23 @@
 
 Shared tooling for UAV acoustic localization experiments.
 
+## Model Comparison (From REPORTs)
+
+Best observed metrics per run from:
+- `models/original_improved/runs/default/REPORT.md`
+- `models/multitask_resnet_kendall_v4/runs/default/REPORT.md`
+- `models/multitask_resnet_klbalance/runs/exp01/REPORT.md`
+- `models/twostream_gcc_mel/runs/exp01/REPORT.md`
+
+| Method | Run | Dist MAE (m) | Height MAE (m) | Azimuth MAE (deg) | Side Acc | Side MAE est (deg) |
+|---|---|---:|---:|---:|---:|---:|
+| `original_improved` | `default` | 0.713 | 0.770 | 2.489 | 0.818 | 18.11 |
+| `multitask_resnet_kendall_v4` | `default` | 0.029 | 0.042 | 3.684 | 0.620 | 43.83 |
+| `multitask_resnet_klbalance` | `exp01` | 0.112 | 0.059 | 5.546 | 0.648 | 40.08 |
+| `twostream_gcc_mel` | `exp01` | 1.056 | 1.972 | 2.983 | 0.275 | 86.34 |
+
+Paper benchmark reference (44.1 kHz, FFT=1024, hop=256, Mel=256): Distance `0.36 m`, Height `0.30 m`, Azimuth `0.94 deg`, Side `9.50 deg` MAE.
+
 ## PyTorch Dataloader
 
 Use `acoustic_ml.data.AcousticUAVDataset` for multi-channel windows from `mic_array_data`.
