@@ -12,6 +12,7 @@ Best observed metrics per run from:
 
 | Method | Run | Dist MAE (m) | Height MAE (m) | Azimuth MAE (deg) | Side Acc | Side MAE est (deg) |
 |---|---|---:|---:|---:|---:|---:|
+| `paper_baseline_mel` | `44.1k/1024/256/256` | 0.360 | 0.300 | 0.940 | - | 9.50 |
 | `original_improved` | `default` | 0.713 | 0.770 | 2.489 | 0.818 | 18.11 |
 | `multitask_resnet_kendall_v4` | `default` | 0.029 | 0.042 | 3.684 | 0.620 | 43.83 |
 | `multitask_resnet_klbalance` | `exp01` | 0.112 | 0.059 | 5.546 | 0.648 | 40.08 |
