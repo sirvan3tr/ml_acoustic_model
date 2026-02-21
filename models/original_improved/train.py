@@ -84,8 +84,8 @@ def move_to_device(batch: dict[str, object], device: torch.device) -> tuple[torc
     side_xy = side_class_to_xy(side_class)
 
     targets_6d = torch.stack([
-        regression[:, 0],
-        regression[:, 1],
+        regression[:, 0] / 20.0,
+        regression[:, 1] / 20.0,
         azimuth_xy[:, 0],
         azimuth_xy[:, 1],
         side_xy[:, 0],
@@ -155,8 +155,8 @@ def evaluate(
         outputs_6d = model(audio)
         _, loss_scalars = criterion(outputs_6d, targets_6d)
         
-        pred_distance = outputs_6d[:, 0]
-        pred_height = outputs_6d[:, 1]
+        pred_distance = outputs_6d[:, 0] * 20.0
+        pred_height = outputs_6d[:, 1] * 20.0
         pred_az_xy = outputs_6d[:, 2:4]
         pred_side_xy = outputs_6d[:, 4:6]
 

@@ -38,8 +38,8 @@ class ImprovedKendallMSELoss(nn.Module):
         total_loss = weighted.sum()
 
         with torch.no_grad():
-            l1_dist = F.l1_loss(outputs[:, 0], targets[:, 0]).item()
-            l1_height = F.l1_loss(outputs[:, 1], targets[:, 1]).item()
+            l1_dist = F.l1_loss(outputs[:, 0] * 20.0, targets[:, 0] * 20.0).item()
+            l1_height = F.l1_loss(outputs[:, 1] * 20.0, targets[:, 1] * 20.0).item()
             l1_sin_az = F.l1_loss(outputs[:, 2], targets[:, 2]).item()
 
         scalars = {

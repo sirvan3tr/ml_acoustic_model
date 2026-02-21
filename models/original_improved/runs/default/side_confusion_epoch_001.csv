@@ -1,5 +1,5 @@
 true_pred,Front,Right,Back,Left
-Front,0,384,0,0
-Right,0,384,0,0
-Back,0,384,0,0
-Left,0,384,0,0
+Front,0,109,144,131
+Right,0,112,153,119
+Back,0,125,157,102
+Left,0,124,126,134
