@@ -1,6 +1,10 @@
 mic_array_data/
 mic_array.zip
 
+# Simulation artifacts
+simulation/outputs/
+simulation/**/*.wav
+
 # Model artifacts/checkpoints
 *.pt
 *.pth
